@@ -1,42 +1,40 @@
-class Herio {
+class Heroi {
     constructor(nome, idade, tipo) {
         this.nome = nome;
         this.idade = idade;
         this.tipo = tipo;
     }
-    atacar() {
 
+    atacar() {
         let ataque;
 
         switch (this.tipo.toLowerCase()) {
-            case 'Mago':
+            case 'mago':
                 ataque = 'magia';
                 break;
-            case 'Guerreiro':
+            case 'guerreiro':
                 ataque = 'espada';
                 break;
-            case 'Monge':
+            case 'monge':
                 ataque = 'artes marciais';
                 break;
-            case `Ninja`:
+            case 'ninja':
                 ataque = 'shuriken';
                 break;
             default:
                 ataque = 'um ataque desconhecido';
-
         }
+
         console.log(`O ${this.tipo} atacou usando ${ataque}`);
     }
 }
 
-// test
-
+// Test
 const AreaDosHerois = [
-
-    new Herio("Gandalf", 2000, "Mago"),
-    new Herio("Aragorn", 87, "Guerreiro"),
-    new Herio("Bruce Lee", 32, "Monge"),
-    new Herio("Hanzo", 25, "Ninja")
+    new Heroi("Gandalf", 2000, "Mago"),
+    new Heroi("Aragorn", 87, "Guerreiro"),
+    new Heroi("Bruce Lee", 32, "Monge"),
+    new Heroi("Hanzo", 25, "Ninja")
 ]
 
 for (let i = 0; i < AreaDosHerois.length; i++) {
